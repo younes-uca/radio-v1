@@ -10,8 +10,8 @@ import ma.enova.radio.dao.criteria.history.PositionnementHistoryCriteria;
 
 public interface PositionnementAdminService extends IService<Positionnement, PositionnementDto,PositionnementCriteria, PositionnementHistoryCriteria> {
 
-    List<Positionnement> findByServicesCode(String code);
-    int deleteByServicesCode(String code);
+    List<Positionnement> findByServicesId(Long id);
+    int deleteByServicesId(Long id);
     Long getNextOrdre();
 
 

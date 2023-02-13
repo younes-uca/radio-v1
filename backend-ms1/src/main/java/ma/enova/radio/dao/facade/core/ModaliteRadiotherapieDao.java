@@ -16,8 +16,8 @@ public interface ModaliteRadiotherapieDao extends AbstractRepository<ModaliteRad
     ModaliteRadiotherapie findByCode(String code);
     int deleteByCode(String code);
 
-    List<ModaliteRadiotherapie> findByServicesCode(String code);
-    int deleteByServicesCode(String code);
+    List<ModaliteRadiotherapie> findByServicesId(Long id);
+    int deleteByServicesId(Long id);
 
     @Query(value = "SELECT MAX(item.ordre) FROM ModaliteRadiotherapie item where item.etablissementId = :etablissementId")
     Long findMaxOrdreByEtablissementIdOrder(@Param("etablissementId") Long etablissementId);

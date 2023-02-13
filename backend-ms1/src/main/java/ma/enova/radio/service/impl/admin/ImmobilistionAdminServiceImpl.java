@@ -14,6 +14,7 @@ import ma.enova.radio.zynerator.service.AbstractServiceImpl;
 import org.springframework.stereotype.Service;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 
 import ma.enova.radio.service.facade.admin.ServicesAdminService ;
 

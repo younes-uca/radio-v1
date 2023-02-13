@@ -29,9 +29,6 @@ import ma.enova.radio.workflow.admin.process.prescriptionradiotherapie.simuler.P
 import ma.enova.radio.workflow.admin.process.prescriptionradiotherapie.validatephysicien.PrescriptionRadiotherapieValidatePhysicienAdminProcess ;
 import ma.enova.radio.workflow.admin.process.prescriptionradiotherapie.validatephysicien.PrescriptionRadiotherapieValidatePhysicienAdminInput ;
 import ma.enova.radio.workflow.admin.process.prescriptionradiotherapie.validatephysicien.PrescriptionRadiotherapieValidatePhysicienAdminOutput ;
-import ma.enova.radio.workflow.admin.process.prescriptionradiotherapie.validateradiotherapeute.PrescriptionRadiotherapieValidateRadiotherapeuteAdminProcess ;
-import ma.enova.radio.workflow.admin.process.prescriptionradiotherapie.validateradiotherapeute.PrescriptionRadiotherapieValidateRadiotherapeuteAdminInput ;
-import ma.enova.radio.workflow.admin.process.prescriptionradiotherapie.validateradiotherapeute.PrescriptionRadiotherapieValidateRadiotherapeuteAdminOutput ;
 import ma.enova.radio.workflow.admin.process.prescriptionradiotherapie.suivreconsultation.PrescriptionRadiotherapieSuivreConsultationAdminProcess ;
 import ma.enova.radio.workflow.admin.process.prescriptionradiotherapie.suivreconsultation.PrescriptionRadiotherapieSuivreConsultationAdminInput ;
 import ma.enova.radio.workflow.admin.process.prescriptionradiotherapie.suivreconsultation.PrescriptionRadiotherapieSuivreConsultationAdminOutput ;
@@ -63,13 +60,6 @@ public class PrescriptionRadiotherapieRestAdmin  extends AbstractController<Pres
     public ResponseEntity<Result<PrescriptionRadiotherapieValidatePhysicienAdminInput,PrescriptionRadiotherapieValidatePhysicienAdminOutput>> validatePhysicienProcess(@RequestBody PrescriptionRadiotherapieValidatePhysicienAdminInput input) throws Exception {
         PrescriptionRadiotherapieValidatePhysicienAdminOutput output = new PrescriptionRadiotherapieValidatePhysicienAdminOutput();
         Result<PrescriptionRadiotherapieValidatePhysicienAdminInput, PrescriptionRadiotherapieValidatePhysicienAdminOutput> result = prescriptionRadiotherapieValidatePhysicienAdminProcess.execute(input, output);
-        return new ResponseEntity<>(result, result.getStatus());
-    }
-    @ApiOperation("validateRadiotherapeute a prescriptionRadiotherapie")
-    @PostMapping("process/validateradiotherapeute")
-    public ResponseEntity<Result<PrescriptionRadiotherapieValidateRadiotherapeuteAdminInput,PrescriptionRadiotherapieValidateRadiotherapeuteAdminOutput>> validateRadiotherapeuteProcess(@RequestBody PrescriptionRadiotherapieValidateRadiotherapeuteAdminInput input) throws Exception {
-        PrescriptionRadiotherapieValidateRadiotherapeuteAdminOutput output = new PrescriptionRadiotherapieValidateRadiotherapeuteAdminOutput();
-        Result<PrescriptionRadiotherapieValidateRadiotherapeuteAdminInput, PrescriptionRadiotherapieValidateRadiotherapeuteAdminOutput> result = prescriptionRadiotherapieValidateRadiotherapeuteAdminProcess.execute(input, output);
         return new ResponseEntity<>(result, result.getStatus());
     }
     @ApiOperation("suivreConsultation a prescriptionRadiotherapie")
@@ -269,8 +259,6 @@ public class PrescriptionRadiotherapieRestAdmin  extends AbstractController<Pres
     private PrescriptionRadiotherapieSimulerAdminProcess prescriptionRadiotherapieSimulerAdminProcess;
     @Autowired
     private PrescriptionRadiotherapieValidatePhysicienAdminProcess prescriptionRadiotherapieValidatePhysicienAdminProcess;
-    @Autowired
-    private PrescriptionRadiotherapieValidateRadiotherapeuteAdminProcess prescriptionRadiotherapieValidateRadiotherapeuteAdminProcess;
     @Autowired
     private PrescriptionRadiotherapieSuivreConsultationAdminProcess prescriptionRadiotherapieSuivreConsultationAdminProcess;
     @Autowired

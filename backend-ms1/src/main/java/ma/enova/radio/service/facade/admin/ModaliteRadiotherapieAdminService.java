@@ -10,8 +10,8 @@ import ma.enova.radio.dao.criteria.history.ModaliteRadiotherapieHistoryCriteria;
 
 public interface ModaliteRadiotherapieAdminService extends IService<ModaliteRadiotherapie, ModaliteRadiotherapieDto,ModaliteRadiotherapieCriteria, ModaliteRadiotherapieHistoryCriteria> {
 
-    List<ModaliteRadiotherapie> findByServicesCode(String code);
-    int deleteByServicesCode(String code);
+    List<ModaliteRadiotherapie> findByServicesId(Long id);
+    int deleteByServicesId(Long id);
     Long getNextOrdre();
 
 

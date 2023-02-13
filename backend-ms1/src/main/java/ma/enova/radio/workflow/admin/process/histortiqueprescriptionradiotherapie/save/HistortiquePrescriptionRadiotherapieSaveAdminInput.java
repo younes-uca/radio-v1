@@ -5,8 +5,8 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import com.fasterxml.jackson.annotation.JsonFormat;
 
-import ma.enova.radio.ws.dto.PrescriptionRadiotherapieDto;
 import ma.enova.radio.ws.dto.StatutRadiotherapieDto;
+import ma.enova.radio.ws.dto.PrescriptionRadiotherapieDto;
 import ma.enova.radio.zynerator.audit.Log;
 import ma.enova.radio.zynerator.dto.AuditBaseDto;
 import com.fasterxml.jackson.annotation.JsonInclude;

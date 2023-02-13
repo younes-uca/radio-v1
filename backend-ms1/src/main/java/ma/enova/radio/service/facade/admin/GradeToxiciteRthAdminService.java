@@ -10,8 +10,8 @@ import ma.enova.radio.dao.criteria.history.GradeToxiciteRthHistoryCriteria;
 
 public interface GradeToxiciteRthAdminService extends IService<GradeToxiciteRth, GradeToxiciteRthDto,GradeToxiciteRthCriteria, GradeToxiciteRthHistoryCriteria> {
 
-    List<GradeToxiciteRth> findByServicesCode(String code);
-    int deleteByServicesCode(String code);
+    List<GradeToxiciteRth> findByServicesId(Long id);
+    int deleteByServicesId(Long id);
     Long getNextOrdre();
 
 

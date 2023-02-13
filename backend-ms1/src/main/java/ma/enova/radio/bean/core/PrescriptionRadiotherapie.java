@@ -103,7 +103,7 @@ public class PrescriptionRadiotherapie   extends AuditBusinessObject  {
         this.id = id;
     }
     public String getDecisionTraitementCode(){
-        return this.DecisionTraitementCode;
+        return this.decisionTraitementCode;
     }
     public void setDecisionTraitementCode(String decisionTraitementCode){
         this.decisionTraitementCode = decisionTraitementCode;

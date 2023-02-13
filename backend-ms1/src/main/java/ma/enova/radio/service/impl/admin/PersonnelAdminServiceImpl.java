@@ -14,9 +14,10 @@ import ma.enova.radio.zynerator.service.AbstractServiceImpl;
 import org.springframework.stereotype.Service;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 
-import ma.enova.radio.service.facade.admin.CategoriePersonnelAdminService ;
 import ma.enova.radio.service.facade.admin.SpecialiteAdminService ;
+import ma.enova.radio.service.facade.admin.CategoriePersonnelAdminService ;
 
 
 import java.util.List;
@@ -58,9 +59,9 @@ PersonnelHistoryDao, PersonnelConverter> implements PersonnelAdminService {
     }
 
     @Autowired
-    private CategoriePersonnelAdminService categoriePersonnelService ;
-    @Autowired
     private SpecialiteAdminService specialiteService ;
+    @Autowired
+    private CategoriePersonnelAdminService categoriePersonnelService ;
     public PersonnelAdminServiceImpl(PersonnelDao dao, PersonnelHistoryDao historyDao, PersonnelConverter converter) {
         super(dao, historyDao, converter);
     }

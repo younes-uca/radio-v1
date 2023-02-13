@@ -16,8 +16,8 @@ public interface SiteDao extends AbstractRepository<Site,Long> {
     Site findByCode(String code);
     int deleteByCode(String code);
 
-    List<Site> findByServicesCode(String code);
-    int deleteByServicesCode(String code);
+    List<Site> findByServicesId(Long id);
+    int deleteByServicesId(Long id);
 
     @Query(value = "SELECT MAX(item.ordre) FROM Site item where item.etablissementId = :etablissementId")
     Long findMaxOrdreByEtablissementIdOrder(@Param("etablissementId") Long etablissementId);

@@ -10,8 +10,8 @@ import ma.enova.radio.dao.criteria.history.ViseeHistoryCriteria;
 
 public interface ViseeAdminService extends IService<Visee, ViseeDto,ViseeCriteria, ViseeHistoryCriteria> {
 
-    List<Visee> findByServicesCode(String code);
-    int deleteByServicesCode(String code);
+    List<Visee> findByServicesId(Long id);
+    int deleteByServicesId(Long id);
     Long getNextOrdre();
 
 

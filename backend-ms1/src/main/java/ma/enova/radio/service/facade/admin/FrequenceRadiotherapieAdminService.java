@@ -10,8 +10,8 @@ import ma.enova.radio.dao.criteria.history.FrequenceRadiotherapieHistoryCriteria
 
 public interface FrequenceRadiotherapieAdminService extends IService<FrequenceRadiotherapie, FrequenceRadiotherapieDto,FrequenceRadiotherapieCriteria, FrequenceRadiotherapieHistoryCriteria> {
 
-    List<FrequenceRadiotherapie> findByServicesCode(String code);
-    int deleteByServicesCode(String code);
+    List<FrequenceRadiotherapie> findByServicesId(Long id);
+    int deleteByServicesId(Long id);
     Long getNextOrdre();
 
 

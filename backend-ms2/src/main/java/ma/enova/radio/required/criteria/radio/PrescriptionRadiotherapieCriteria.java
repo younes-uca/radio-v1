@@ -1,5 +1,6 @@
 package  ma.enova.radio.required.criteria.radio;
 
+import ma.enova.radio.dao.criteria.core.DecisionTraitementCriteria;
 import ma.enova.radio.zynerator.criteria.BaseCriteria;
     import java.util.List;
     import com.fasterxml.jackson.annotation.JsonFormat;

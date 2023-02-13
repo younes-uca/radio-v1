@@ -11,10 +11,10 @@ import ma.enova.radio.service.facade.admin.CategoriePersonnelAdminService;
 import ma.enova.radio.ws.converter.CategoriePersonnelConverter;
 import ma.enova.radio.ws.dto.CategoriePersonnelDto;
 import ma.enova.radio.zynerator.service.AbstractServiceImpl;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 
 import ma.enova.radio.service.facade.admin.ServicesAdminService ;
 

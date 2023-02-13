@@ -10,8 +10,8 @@ import ma.enova.radio.dao.criteria.history.TypeConsultationRadiotherapieHistoryC
 
 public interface TypeConsultationRadiotherapieAdminService extends IService<TypeConsultationRadiotherapie, TypeConsultationRadiotherapieDto,TypeConsultationRadiotherapieCriteria, TypeConsultationRadiotherapieHistoryCriteria> {
 
-    List<TypeConsultationRadiotherapie> findByServicesCode(String code);
-    int deleteByServicesCode(String code);
+    List<TypeConsultationRadiotherapie> findByServicesId(Long id);
+    int deleteByServicesId(Long id);
     Long getNextOrdre();
 
 

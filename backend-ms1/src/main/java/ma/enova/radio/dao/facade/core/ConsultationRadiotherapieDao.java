@@ -11,14 +11,14 @@ import java.util.List;
 @Repository
 public interface ConsultationRadiotherapieDao extends AbstractRepository<ConsultationRadiotherapie,Long> {
 
-    List<ConsultationRadiotherapie> findByMedecinIpp(String ipp);
-    int deleteByMedecinIpp(String ipp);
-    List<ConsultationRadiotherapie> findByTypeConsultationRadiotherapieCode(String code);
-    int deleteByTypeConsultationRadiotherapieCode(String code);
-    List<ConsultationRadiotherapie> findByTypeToxiciteRthCode(String code);
-    int deleteByTypeToxiciteRthCode(String code);
-    List<ConsultationRadiotherapie> findByGradeToxiciteRthCode(String code);
-    int deleteByGradeToxiciteRthCode(String code);
+    List<ConsultationRadiotherapie> findByMedecinId(Long id);
+    int deleteByMedecinId(Long id);
+    List<ConsultationRadiotherapie> findByTypeConsultationRadiotherapieId(Long id);
+    int deleteByTypeConsultationRadiotherapieId(Long id);
+    List<ConsultationRadiotherapie> findByTypeToxiciteRthId(Long id);
+    int deleteByTypeToxiciteRthId(Long id);
+    List<ConsultationRadiotherapie> findByGradeToxiciteRthId(Long id);
+    int deleteByGradeToxiciteRthId(Long id);
     List<ConsultationRadiotherapie> findByPrescriptionRadiotherapieId(Long id);
     int deleteByPrescriptionRadiotherapieId(Long id);
 

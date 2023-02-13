@@ -14,11 +14,12 @@ import ma.enova.radio.zynerator.service.AbstractServiceImpl;
 import org.springframework.stereotype.Service;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 
+import ma.enova.radio.service.facade.admin.PersonnelAdminService ;
+import ma.enova.radio.service.facade.admin.GradeToxiciteRthAdminService ;
 import ma.enova.radio.service.facade.admin.TypeToxiciteRthAdminService ;
 import ma.enova.radio.service.facade.admin.PrescriptionRadiotherapieAdminService ;
-import ma.enova.radio.service.facade.admin.GradeToxiciteRthAdminService ;
-import ma.enova.radio.service.facade.admin.PersonnelAdminService ;
 import ma.enova.radio.service.facade.admin.TypeConsultationRadiotherapieAdminService ;
 
 
@@ -75,13 +76,13 @@ ConsultationRadiotherapieHistoryDao, ConsultationRadiotherapieConverter> impleme
     }
 
     @Autowired
-    private TypeToxiciteRthAdminService typeToxiciteRthService ;
-    @Autowired
-    private PrescriptionRadiotherapieAdminService prescriptionRadiotherapieService ;
+    private PersonnelAdminService personnelService ;
     @Autowired
     private GradeToxiciteRthAdminService gradeToxiciteRthService ;
     @Autowired
-    private PersonnelAdminService personnelService ;
+    private TypeToxiciteRthAdminService typeToxiciteRthService ;
+    @Autowired
+    private PrescriptionRadiotherapieAdminService prescriptionRadiotherapieService ;
     @Autowired
     private TypeConsultationRadiotherapieAdminService typeConsultationRadiotherapieService ;
     public ConsultationRadiotherapieAdminServiceImpl(ConsultationRadiotherapieDao dao, ConsultationRadiotherapieHistoryDao historyDao, ConsultationRadiotherapieConverter converter) {

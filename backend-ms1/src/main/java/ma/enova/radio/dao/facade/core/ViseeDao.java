@@ -16,8 +16,8 @@ public interface ViseeDao extends AbstractRepository<Visee,Long> {
     Visee findByCode(String code);
     int deleteByCode(String code);
 
-    List<Visee> findByServicesCode(String code);
-    int deleteByServicesCode(String code);
+    List<Visee> findByServicesId(Long id);
+    int deleteByServicesId(Long id);
 
     @Query(value = "SELECT MAX(item.ordre) FROM Visee item where item.etablissementId = :etablissementId")
     Long findMaxOrdreByEtablissementIdOrder(@Param("etablissementId") Long etablissementId);

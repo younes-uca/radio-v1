@@ -14,20 +14,21 @@ import ma.enova.radio.zynerator.service.AbstractServiceImpl;
 import org.springframework.stereotype.Service;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
+import ma.enova.radio.service.facade.admin.PersonnelAdminService ;
 import ma.enova.radio.service.facade.admin.SeanceRadiotherapieAdminService ;
-import ma.enova.radio.service.facade.admin.ConsultationRadiotherapieAdminService ;
+import ma.enova.radio.service.facade.admin.ModaliteRadiotherapieAdminService ;
+import ma.enova.radio.service.facade.admin.StatutRadiotherapieAdminService ;
 import ma.enova.radio.service.facade.admin.SiteAdminService ;
+import ma.enova.radio.service.facade.admin.HistortiquePrescriptionRadiotherapieAdminService ;
 import ma.enova.radio.service.facade.admin.PatientAdminService ;
+import ma.enova.radio.service.facade.admin.ConsultationRadiotherapieAdminService ;
+import ma.enova.radio.service.facade.admin.TypeTraitementAdminService ;
 import ma.enova.radio.service.facade.admin.ProtocoleInclusionAdminService ;
 import ma.enova.radio.service.facade.admin.ViseeAdminService ;
-import ma.enova.radio.service.facade.admin.PersonnelAdminService ;
-import ma.enova.radio.service.facade.admin.ModaliteRadiotherapieAdminService ;
-import ma.enova.radio.service.facade.admin.TypeTraitementAdminService ;
-import ma.enova.radio.service.facade.admin.StatutRadiotherapieAdminService ;
-import ma.enova.radio.service.facade.admin.HistortiquePrescriptionRadiotherapieAdminService ;
 
 
 import java.util.List;
@@ -174,27 +175,27 @@ PrescriptionRadiotherapieHistoryDao, PrescriptionRadiotherapieConverter> impleme
     }
 
     @Autowired
+    private PersonnelAdminService personnelService ;
+    @Autowired
     private SeanceRadiotherapieAdminService seanceRadiotherapieService ;
     @Autowired
-    private ConsultationRadiotherapieAdminService consultationRadiotherapieService ;
+    private ModaliteRadiotherapieAdminService modaliteRadiotherapieService ;
+    @Autowired
+    private StatutRadiotherapieAdminService statutRadiotherapieService ;
     @Autowired
     private SiteAdminService siteService ;
     @Autowired
+    private HistortiquePrescriptionRadiotherapieAdminService histortiquePrescriptionRadiotherapieService ;
+    @Autowired
     private PatientAdminService patientService ;
+    @Autowired
+    private ConsultationRadiotherapieAdminService consultationRadiotherapieService ;
+    @Autowired
+    private TypeTraitementAdminService typeTraitementService ;
     @Autowired
     private ProtocoleInclusionAdminService protocoleInclusionService ;
     @Autowired
     private ViseeAdminService viseeService ;
-    @Autowired
-    private PersonnelAdminService personnelService ;
-    @Autowired
-    private ModaliteRadiotherapieAdminService modaliteRadiotherapieService ;
-    @Autowired
-    private TypeTraitementAdminService typeTraitementService ;
-    @Autowired
-    private StatutRadiotherapieAdminService statutRadiotherapieService ;
-    @Autowired
-    private HistortiquePrescriptionRadiotherapieAdminService histortiquePrescriptionRadiotherapieService ;
     public PrescriptionRadiotherapieAdminServiceImpl(PrescriptionRadiotherapieDao dao, PrescriptionRadiotherapieHistoryDao historyDao, PrescriptionRadiotherapieConverter converter) {
         super(dao, historyDao, converter);
     }

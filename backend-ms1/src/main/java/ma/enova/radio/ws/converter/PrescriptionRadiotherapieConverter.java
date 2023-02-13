@@ -16,33 +16,33 @@ import ma.enova.radio.ws.dto.PrescriptionRadiotherapieDto;
 public class PrescriptionRadiotherapieConverter extends AbstractConverter<PrescriptionRadiotherapie, PrescriptionRadiotherapieDto, PrescriptionRadiotherapieHistory> {
 
     @Autowired
-    private TypeToxiciteRthConverter typeToxiciteRthConverter ;
-    @Autowired
-    private TypeTraitementConverter typeTraitementConverter ;
-    @Autowired
-    private StatutRadiotherapieConverter statutRadiotherapieConverter ;
-    @Autowired
-    private HistortiquePrescriptionRadiotherapieConverter histortiquePrescriptionRadiotherapieConverter ;
-    @Autowired
-    private SeanceRadiotherapieConverter seanceRadiotherapieConverter ;
-    @Autowired
-    private PatientConverter patientConverter ;
-    @Autowired
-    private ViseeConverter viseeConverter ;
-    @Autowired
-    private ModaliteRadiotherapieConverter modaliteRadiotherapieConverter ;
-    @Autowired
-    private TypeConsultationRadiotherapieConverter typeConsultationRadiotherapieConverter ;
-    @Autowired
-    private SiteConverter siteConverter ;
-    @Autowired
-    private GradeToxiciteRthConverter gradeToxiciteRthConverter ;
-    @Autowired
     private ConsultationRadiotherapieConverter consultationRadiotherapieConverter ;
     @Autowired
     private ProtocoleInclusionConverter protocoleInclusionConverter ;
     @Autowired
+    private ViseeConverter viseeConverter ;
+    @Autowired
+    private GradeToxiciteRthConverter gradeToxiciteRthConverter ;
+    @Autowired
+    private ModaliteRadiotherapieConverter modaliteRadiotherapieConverter ;
+    @Autowired
+    private TypeTraitementConverter typeTraitementConverter ;
+    @Autowired
+    private TypeConsultationRadiotherapieConverter typeConsultationRadiotherapieConverter ;
+    @Autowired
     private PersonnelConverter personnelConverter ;
+    @Autowired
+    private SeanceRadiotherapieConverter seanceRadiotherapieConverter ;
+    @Autowired
+    private TypeToxiciteRthConverter typeToxiciteRthConverter ;
+    @Autowired
+    private StatutRadiotherapieConverter statutRadiotherapieConverter ;
+    @Autowired
+    private SiteConverter siteConverter ;
+    @Autowired
+    private HistortiquePrescriptionRadiotherapieConverter histortiquePrescriptionRadiotherapieConverter ;
+    @Autowired
+    private PatientConverter patientConverter ;
     private boolean decisionTraitement;
     private boolean medecinPrescripteur;
     private boolean site;
@@ -264,72 +264,6 @@ public class PrescriptionRadiotherapieConverter extends AbstractConverter<Prescr
     }
 
 
-    public TypeToxiciteRthConverter getTypeToxiciteRthConverter(){
-        return this.typeToxiciteRthConverter;
-    }
-    public void setTypeToxiciteRthConverter(TypeToxiciteRthConverter typeToxiciteRthConverter ){
-        this.typeToxiciteRthConverter = typeToxiciteRthConverter;
-    }
-    public TypeTraitementConverter getTypeTraitementConverter(){
-        return this.typeTraitementConverter;
-    }
-    public void setTypeTraitementConverter(TypeTraitementConverter typeTraitementConverter ){
-        this.typeTraitementConverter = typeTraitementConverter;
-    }
-    public StatutRadiotherapieConverter getStatutRadiotherapieConverter(){
-        return this.statutRadiotherapieConverter;
-    }
-    public void setStatutRadiotherapieConverter(StatutRadiotherapieConverter statutRadiotherapieConverter ){
-        this.statutRadiotherapieConverter = statutRadiotherapieConverter;
-    }
-    public HistortiquePrescriptionRadiotherapieConverter getHistortiquePrescriptionRadiotherapieConverter(){
-        return this.histortiquePrescriptionRadiotherapieConverter;
-    }
-    public void setHistortiquePrescriptionRadiotherapieConverter(HistortiquePrescriptionRadiotherapieConverter histortiquePrescriptionRadiotherapieConverter ){
-        this.histortiquePrescriptionRadiotherapieConverter = histortiquePrescriptionRadiotherapieConverter;
-    }
-    public SeanceRadiotherapieConverter getSeanceRadiotherapieConverter(){
-        return this.seanceRadiotherapieConverter;
-    }
-    public void setSeanceRadiotherapieConverter(SeanceRadiotherapieConverter seanceRadiotherapieConverter ){
-        this.seanceRadiotherapieConverter = seanceRadiotherapieConverter;
-    }
-    public PatientConverter getPatientConverter(){
-        return this.patientConverter;
-    }
-    public void setPatientConverter(PatientConverter patientConverter ){
-        this.patientConverter = patientConverter;
-    }
-    public ViseeConverter getViseeConverter(){
-        return this.viseeConverter;
-    }
-    public void setViseeConverter(ViseeConverter viseeConverter ){
-        this.viseeConverter = viseeConverter;
-    }
-    public ModaliteRadiotherapieConverter getModaliteRadiotherapieConverter(){
-        return this.modaliteRadiotherapieConverter;
-    }
-    public void setModaliteRadiotherapieConverter(ModaliteRadiotherapieConverter modaliteRadiotherapieConverter ){
-        this.modaliteRadiotherapieConverter = modaliteRadiotherapieConverter;
-    }
-    public TypeConsultationRadiotherapieConverter getTypeConsultationRadiotherapieConverter(){
-        return this.typeConsultationRadiotherapieConverter;
-    }
-    public void setTypeConsultationRadiotherapieConverter(TypeConsultationRadiotherapieConverter typeConsultationRadiotherapieConverter ){
-        this.typeConsultationRadiotherapieConverter = typeConsultationRadiotherapieConverter;
-    }
-    public SiteConverter getSiteConverter(){
-        return this.siteConverter;
-    }
-    public void setSiteConverter(SiteConverter siteConverter ){
-        this.siteConverter = siteConverter;
-    }
-    public GradeToxiciteRthConverter getGradeToxiciteRthConverter(){
-        return this.gradeToxiciteRthConverter;
-    }
-    public void setGradeToxiciteRthConverter(GradeToxiciteRthConverter gradeToxiciteRthConverter ){
-        this.gradeToxiciteRthConverter = gradeToxiciteRthConverter;
-    }
     public ConsultationRadiotherapieConverter getConsultationRadiotherapieConverter(){
         return this.consultationRadiotherapieConverter;
     }
@@ -342,11 +276,77 @@ public class PrescriptionRadiotherapieConverter extends AbstractConverter<Prescr
     public void setProtocoleInclusionConverter(ProtocoleInclusionConverter protocoleInclusionConverter ){
         this.protocoleInclusionConverter = protocoleInclusionConverter;
     }
+    public ViseeConverter getViseeConverter(){
+        return this.viseeConverter;
+    }
+    public void setViseeConverter(ViseeConverter viseeConverter ){
+        this.viseeConverter = viseeConverter;
+    }
+    public GradeToxiciteRthConverter getGradeToxiciteRthConverter(){
+        return this.gradeToxiciteRthConverter;
+    }
+    public void setGradeToxiciteRthConverter(GradeToxiciteRthConverter gradeToxiciteRthConverter ){
+        this.gradeToxiciteRthConverter = gradeToxiciteRthConverter;
+    }
+    public ModaliteRadiotherapieConverter getModaliteRadiotherapieConverter(){
+        return this.modaliteRadiotherapieConverter;
+    }
+    public void setModaliteRadiotherapieConverter(ModaliteRadiotherapieConverter modaliteRadiotherapieConverter ){
+        this.modaliteRadiotherapieConverter = modaliteRadiotherapieConverter;
+    }
+    public TypeTraitementConverter getTypeTraitementConverter(){
+        return this.typeTraitementConverter;
+    }
+    public void setTypeTraitementConverter(TypeTraitementConverter typeTraitementConverter ){
+        this.typeTraitementConverter = typeTraitementConverter;
+    }
+    public TypeConsultationRadiotherapieConverter getTypeConsultationRadiotherapieConverter(){
+        return this.typeConsultationRadiotherapieConverter;
+    }
+    public void setTypeConsultationRadiotherapieConverter(TypeConsultationRadiotherapieConverter typeConsultationRadiotherapieConverter ){
+        this.typeConsultationRadiotherapieConverter = typeConsultationRadiotherapieConverter;
+    }
     public PersonnelConverter getPersonnelConverter(){
         return this.personnelConverter;
     }
     public void setPersonnelConverter(PersonnelConverter personnelConverter ){
         this.personnelConverter = personnelConverter;
+    }
+    public SeanceRadiotherapieConverter getSeanceRadiotherapieConverter(){
+        return this.seanceRadiotherapieConverter;
+    }
+    public void setSeanceRadiotherapieConverter(SeanceRadiotherapieConverter seanceRadiotherapieConverter ){
+        this.seanceRadiotherapieConverter = seanceRadiotherapieConverter;
+    }
+    public TypeToxiciteRthConverter getTypeToxiciteRthConverter(){
+        return this.typeToxiciteRthConverter;
+    }
+    public void setTypeToxiciteRthConverter(TypeToxiciteRthConverter typeToxiciteRthConverter ){
+        this.typeToxiciteRthConverter = typeToxiciteRthConverter;
+    }
+    public StatutRadiotherapieConverter getStatutRadiotherapieConverter(){
+        return this.statutRadiotherapieConverter;
+    }
+    public void setStatutRadiotherapieConverter(StatutRadiotherapieConverter statutRadiotherapieConverter ){
+        this.statutRadiotherapieConverter = statutRadiotherapieConverter;
+    }
+    public SiteConverter getSiteConverter(){
+        return this.siteConverter;
+    }
+    public void setSiteConverter(SiteConverter siteConverter ){
+        this.siteConverter = siteConverter;
+    }
+    public HistortiquePrescriptionRadiotherapieConverter getHistortiquePrescriptionRadiotherapieConverter(){
+        return this.histortiquePrescriptionRadiotherapieConverter;
+    }
+    public void setHistortiquePrescriptionRadiotherapieConverter(HistortiquePrescriptionRadiotherapieConverter histortiquePrescriptionRadiotherapieConverter ){
+        this.histortiquePrescriptionRadiotherapieConverter = histortiquePrescriptionRadiotherapieConverter;
+    }
+    public PatientConverter getPatientConverter(){
+        return this.patientConverter;
+    }
+    public void setPatientConverter(PatientConverter patientConverter ){
+        this.patientConverter = patientConverter;
     }
 
 

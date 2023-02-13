@@ -16,8 +16,8 @@ public interface PositionnementDao extends AbstractRepository<Positionnement,Lon
     Positionnement findByCode(String code);
     int deleteByCode(String code);
 
-    List<Positionnement> findByServicesCode(String code);
-    int deleteByServicesCode(String code);
+    List<Positionnement> findByServicesId(Long id);
+    int deleteByServicesId(Long id);
 
     @Query(value = "SELECT MAX(item.ordre) FROM Positionnement item where item.etablissementId = :etablissementId")
     Long findMaxOrdreByEtablissementIdOrder(@Param("etablissementId") Long etablissementId);

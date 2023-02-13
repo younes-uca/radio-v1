@@ -16,8 +16,8 @@ public interface ProtocoleInclusionDao extends AbstractRepository<ProtocoleInclu
     ProtocoleInclusion findByCode(String code);
     int deleteByCode(String code);
 
-    List<ProtocoleInclusion> findByServicesCode(String code);
-    int deleteByServicesCode(String code);
+    List<ProtocoleInclusion> findByServicesId(Long id);
+    int deleteByServicesId(Long id);
 
     @Query(value = "SELECT MAX(item.ordre) FROM ProtocoleInclusion item where item.etablissementId = :etablissementId")
     Long findMaxOrdreByEtablissementIdOrder(@Param("etablissementId") Long etablissementId);

@@ -16,13 +16,13 @@ import ma.enova.radio.ws.dto.ConsultationRadiotherapieDto;
 public class ConsultationRadiotherapieConverter extends AbstractConverter<ConsultationRadiotherapie, ConsultationRadiotherapieDto, ConsultationRadiotherapieHistory> {
 
     @Autowired
-    private TypeToxiciteRthConverter typeToxiciteRthConverter ;
-    @Autowired
-    private PrescriptionRadiotherapieConverter prescriptionRadiotherapieConverter ;
+    private PersonnelConverter personnelConverter ;
     @Autowired
     private GradeToxiciteRthConverter gradeToxiciteRthConverter ;
     @Autowired
-    private PersonnelConverter personnelConverter ;
+    private TypeToxiciteRthConverter typeToxiciteRthConverter ;
+    @Autowired
+    private PrescriptionRadiotherapieConverter prescriptionRadiotherapieConverter ;
     @Autowired
     private TypeConsultationRadiotherapieConverter typeConsultationRadiotherapieConverter ;
     private boolean medecin;
@@ -111,6 +111,18 @@ public class ConsultationRadiotherapieConverter extends AbstractConverter<Consul
 
 
 
+    public PersonnelConverter getPersonnelConverter(){
+        return this.personnelConverter;
+    }
+    public void setPersonnelConverter(PersonnelConverter personnelConverter ){
+        this.personnelConverter = personnelConverter;
+    }
+    public GradeToxiciteRthConverter getGradeToxiciteRthConverter(){
+        return this.gradeToxiciteRthConverter;
+    }
+    public void setGradeToxiciteRthConverter(GradeToxiciteRthConverter gradeToxiciteRthConverter ){
+        this.gradeToxiciteRthConverter = gradeToxiciteRthConverter;
+    }
     public TypeToxiciteRthConverter getTypeToxiciteRthConverter(){
         return this.typeToxiciteRthConverter;
     }
@@ -122,18 +134,6 @@ public class ConsultationRadiotherapieConverter extends AbstractConverter<Consul
     }
     public void setPrescriptionRadiotherapieConverter(PrescriptionRadiotherapieConverter prescriptionRadiotherapieConverter ){
         this.prescriptionRadiotherapieConverter = prescriptionRadiotherapieConverter;
-    }
-    public GradeToxiciteRthConverter getGradeToxiciteRthConverter(){
-        return this.gradeToxiciteRthConverter;
-    }
-    public void setGradeToxiciteRthConverter(GradeToxiciteRthConverter gradeToxiciteRthConverter ){
-        this.gradeToxiciteRthConverter = gradeToxiciteRthConverter;
-    }
-    public PersonnelConverter getPersonnelConverter(){
-        return this.personnelConverter;
-    }
-    public void setPersonnelConverter(PersonnelConverter personnelConverter ){
-        this.personnelConverter = personnelConverter;
     }
     public TypeConsultationRadiotherapieConverter getTypeConsultationRadiotherapieConverter(){
         return this.typeConsultationRadiotherapieConverter;

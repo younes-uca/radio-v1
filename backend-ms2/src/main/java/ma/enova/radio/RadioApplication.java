@@ -16,10 +16,10 @@ import ma.enova.radio.zynerator.security.bean.Role;
 import ma.enova.radio.zynerator.security.service.facade.UserService;
 import ma.enova.radio.zynerator.security.service.facade.RoleService;
 
-import ma.enova.radio.service.admin.facade.StatutRadiotherapieAdminService;
+/*import ma.enova.radio.service.admin.facade.StatutRadiotherapieAdminService;
 import ma.enova.radio.bean.StatutRadiotherapie;
 import ma.enova.radio.service.admin.facade.TypeTraitementAdminService;
-import ma.enova.radio.bean.TypeTraitement;
+import ma.enova.radio.bean.TypeTraitement;*/
 
 import org.springframework.web.client.RestTemplate;
 
@@ -44,17 +44,18 @@ public class RadioApplication {
 
     @Bean
     public CommandLineRunner demo(UserService userService, RoleService roleService
-    , StatutRadiotherapieAdminService statutRadiotherapieAdminService, TypeTraitementAdminService typeTraitementAdminService) {
+  //  , StatutRadiotherapieAdminService statutRadiotherapieAdminService, TypeTraitementAdminService typeTraitementAdminService
+    ) {
     return (args) -> {
         if(true){
-            Map<String,String> etats=new HashMap<>();
+         /*   Map<String,String> etats=new HashMap<>();
             etats.put("Initialisé","initialise");
             etats.put("En cours","encours");
             etats.put("Terminé","termine");
             etats.entrySet().stream().forEach(e->statutRadiotherapieAdminService.save(new StatutRadiotherapie(e.getKey(),e.getValue())));
             etats.entrySet().stream().forEach(e->typeTraitementAdminService.save(new TypeTraitement(e.getKey(),e.getValue())));
 
-
+*/
     // Role admin
 
         User userForAdmin = new User("admin");
@@ -124,6 +125,11 @@ public class RadioApplication {
         permissions.add(new Permission("Positionnement.view"));
         permissions.add(new Permission("Positionnement.add"));
         permissions.add(new Permission("Positionnement.delete"));
+        permissions.add(new Permission("PrescriptionRadiotherapie.edit"));
+        permissions.add(new Permission("PrescriptionRadiotherapie.list"));
+        permissions.add(new Permission("PrescriptionRadiotherapie.view"));
+        permissions.add(new Permission("PrescriptionRadiotherapie.add"));
+        permissions.add(new Permission("PrescriptionRadiotherapie.delete"));
         permissions.add(new Permission("ConsultationRadiotherapie.edit"));
         permissions.add(new Permission("ConsultationRadiotherapie.list"));
         permissions.add(new Permission("ConsultationRadiotherapie.view"));
@@ -154,11 +160,6 @@ public class RadioApplication {
         permissions.add(new Permission("Visee.view"));
         permissions.add(new Permission("Visee.add"));
         permissions.add(new Permission("Visee.delete"));
-        permissions.add(new Permission("PrescriptionRadiotherapie.edit"));
-        permissions.add(new Permission("PrescriptionRadiotherapie.list"));
-        permissions.add(new Permission("PrescriptionRadiotherapie.view"));
-        permissions.add(new Permission("PrescriptionRadiotherapie.add"));
-        permissions.add(new Permission("PrescriptionRadiotherapie.delete"));
         permissions.add(new Permission("Patient.edit"));
         permissions.add(new Permission("Patient.list"));
         permissions.add(new Permission("Patient.view"));

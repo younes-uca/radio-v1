@@ -10,8 +10,8 @@ import ma.enova.radio.dao.criteria.history.SpecialiteHistoryCriteria;
 
 public interface SpecialiteAdminService extends IService<Specialite, SpecialiteDto,SpecialiteCriteria, SpecialiteHistoryCriteria> {
 
-    List<Specialite> findByServicesCode(String code);
-    int deleteByServicesCode(String code);
+    List<Specialite> findByServicesId(Long id);
+    int deleteByServicesId(Long id);
     Long getNextOrdre();
 
 

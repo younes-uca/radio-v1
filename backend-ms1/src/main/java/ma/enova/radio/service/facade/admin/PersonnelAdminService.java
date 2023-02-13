@@ -10,10 +10,10 @@ import ma.enova.radio.dao.criteria.history.PersonnelHistoryCriteria;
 
 public interface PersonnelAdminService extends IService<Personnel, PersonnelDto,PersonnelCriteria, PersonnelHistoryCriteria> {
 
-    List<Personnel> findByCategoriePersonnelCode(String code);
-    int deleteByCategoriePersonnelCode(String code);
-    List<Personnel> findBySpecialiteCode(String code);
-    int deleteBySpecialiteCode(String code);
+    List<Personnel> findByCategoriePersonnelId(Long id);
+    int deleteByCategoriePersonnelId(Long id);
+    List<Personnel> findBySpecialiteId(Long id);
+    int deleteBySpecialiteId(Long id);
     Long getNextOrdre();
 
 

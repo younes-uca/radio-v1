@@ -15,9 +15,9 @@ import ma.enova.radio.ws.dto.PersonnelDto;
 public class PersonnelConverter extends AbstractConverter<Personnel, PersonnelDto, PersonnelHistory> {
 
     @Autowired
-    private CategoriePersonnelConverter categoriePersonnelConverter ;
-    @Autowired
     private SpecialiteConverter specialiteConverter ;
+    @Autowired
+    private CategoriePersonnelConverter categoriePersonnelConverter ;
     private boolean categoriePersonnel;
     private boolean specialite;
 
@@ -100,17 +100,17 @@ public class PersonnelConverter extends AbstractConverter<Personnel, PersonnelDt
 
 
 
-    public CategoriePersonnelConverter getCategoriePersonnelConverter(){
-        return this.categoriePersonnelConverter;
-    }
-    public void setCategoriePersonnelConverter(CategoriePersonnelConverter categoriePersonnelConverter ){
-        this.categoriePersonnelConverter = categoriePersonnelConverter;
-    }
     public SpecialiteConverter getSpecialiteConverter(){
         return this.specialiteConverter;
     }
     public void setSpecialiteConverter(SpecialiteConverter specialiteConverter ){
         this.specialiteConverter = specialiteConverter;
+    }
+    public CategoriePersonnelConverter getCategoriePersonnelConverter(){
+        return this.categoriePersonnelConverter;
+    }
+    public void setCategoriePersonnelConverter(CategoriePersonnelConverter categoriePersonnelConverter ){
+        this.categoriePersonnelConverter = categoriePersonnelConverter;
     }
 
 

@@ -11,23 +11,23 @@ import java.util.List;
 @Repository
 public interface PrescriptionRadiotherapieDao extends AbstractRepository<PrescriptionRadiotherapie,Long> {
 
-    List<PrescriptionRadiotherapie> findByMedecinPrescripteurIpp(String ipp);
-    int deleteByMedecinPrescripteurIpp(String ipp);
-    List<PrescriptionRadiotherapie> findBySiteCode(String code);
-    int deleteBySiteCode(String code);
-    List<PrescriptionRadiotherapie> findByModaliteRadiotherapieCode(String code);
-    int deleteByModaliteRadiotherapieCode(String code);
-    List<PrescriptionRadiotherapie> findByViseeCode(String code);
-    int deleteByViseeCode(String code);
-    List<PrescriptionRadiotherapie> findByProtocoleInclusionCode(String code);
-    int deleteByProtocoleInclusionCode(String code);
-    List<PrescriptionRadiotherapie> findByStatutRadiotherapieId(Long id);
-    int deleteByStatutRadiotherapieId(Long id);
-    List<PrescriptionRadiotherapie> findByValidateurSimulationIpp(String ipp);
-    int deleteByValidateurSimulationIpp(String ipp);
-    List<PrescriptionRadiotherapie> findByPatientIpp(String ipp);
-    int deleteByPatientIpp(String ipp);
-    List<PrescriptionRadiotherapie> findByTypeTraitementId(Long id);
-    int deleteByTypeTraitementId(Long id);
+    List<PrescriptionRadiotherapie> findByMedecinPrescripteurId(Long id);
+    int deleteByMedecinPrescripteurId(Long id);
+    List<PrescriptionRadiotherapie> findBySiteId(Long id);
+    int deleteBySiteId(Long id);
+    List<PrescriptionRadiotherapie> findByModaliteRadiotherapieId(Long id);
+    int deleteByModaliteRadiotherapieId(Long id);
+    List<PrescriptionRadiotherapie> findByViseeId(Long id);
+    int deleteByViseeId(Long id);
+    List<PrescriptionRadiotherapie> findByProtocoleInclusionId(Long id);
+    int deleteByProtocoleInclusionId(Long id);
+    List<PrescriptionRadiotherapie> findByStatutRadiotherapieCode(String code);
+    int deleteByStatutRadiotherapieCode(String code);
+    List<PrescriptionRadiotherapie> findByValidateurSimulationId(Long id);
+    int deleteByValidateurSimulationId(Long id);
+    List<PrescriptionRadiotherapie> findByPatientId(Long id);
+    int deleteByPatientId(Long id);
+    List<PrescriptionRadiotherapie> findByTypeTraitementCode(String code);
+    int deleteByTypeTraitementCode(String code);
 
 }

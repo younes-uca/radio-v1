@@ -16,9 +16,9 @@ import ma.enova.radio.ws.dto.HistortiquePrescriptionRadiotherapieDto;
 public class HistortiquePrescriptionRadiotherapieConverter extends AbstractConverter<HistortiquePrescriptionRadiotherapie, HistortiquePrescriptionRadiotherapieDto, HistortiquePrescriptionRadiotherapieHistory> {
 
     @Autowired
-    private PrescriptionRadiotherapieConverter prescriptionRadiotherapieConverter ;
-    @Autowired
     private StatutRadiotherapieConverter statutRadiotherapieConverter ;
+    @Autowired
+    private PrescriptionRadiotherapieConverter prescriptionRadiotherapieConverter ;
     private boolean prescriptionRadiotherapie;
     private boolean statutRadiotherapie;
 
@@ -76,17 +76,17 @@ public class HistortiquePrescriptionRadiotherapieConverter extends AbstractConve
 
 
 
-    public PrescriptionRadiotherapieConverter getPrescriptionRadiotherapieConverter(){
-        return this.prescriptionRadiotherapieConverter;
-    }
-    public void setPrescriptionRadiotherapieConverter(PrescriptionRadiotherapieConverter prescriptionRadiotherapieConverter ){
-        this.prescriptionRadiotherapieConverter = prescriptionRadiotherapieConverter;
-    }
     public StatutRadiotherapieConverter getStatutRadiotherapieConverter(){
         return this.statutRadiotherapieConverter;
     }
     public void setStatutRadiotherapieConverter(StatutRadiotherapieConverter statutRadiotherapieConverter ){
         this.statutRadiotherapieConverter = statutRadiotherapieConverter;
+    }
+    public PrescriptionRadiotherapieConverter getPrescriptionRadiotherapieConverter(){
+        return this.prescriptionRadiotherapieConverter;
+    }
+    public void setPrescriptionRadiotherapieConverter(PrescriptionRadiotherapieConverter prescriptionRadiotherapieConverter ){
+        this.prescriptionRadiotherapieConverter = prescriptionRadiotherapieConverter;
     }
 
 

@@ -14,9 +14,10 @@ import ma.enova.radio.zynerator.service.AbstractServiceImpl;
 import org.springframework.stereotype.Service;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 
-import ma.enova.radio.service.facade.admin.PrescriptionRadiotherapieAdminService ;
 import ma.enova.radio.service.facade.admin.StatutRadiotherapieAdminService ;
+import ma.enova.radio.service.facade.admin.PrescriptionRadiotherapieAdminService ;
 
 
 import java.util.List;
@@ -51,9 +52,9 @@ HistortiquePrescriptionRadiotherapieHistoryDao, HistortiquePrescriptionRadiother
     }
 
     @Autowired
-    private PrescriptionRadiotherapieAdminService prescriptionRadiotherapieService ;
-    @Autowired
     private StatutRadiotherapieAdminService statutRadiotherapieService ;
+    @Autowired
+    private PrescriptionRadiotherapieAdminService prescriptionRadiotherapieService ;
     public HistortiquePrescriptionRadiotherapieAdminServiceImpl(HistortiquePrescriptionRadiotherapieDao dao, HistortiquePrescriptionRadiotherapieHistoryDao historyDao, HistortiquePrescriptionRadiotherapieConverter converter) {
         super(dao, historyDao, converter);
     }

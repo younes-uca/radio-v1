@@ -16,8 +16,8 @@ public interface TypeConsultationRadiotherapieDao extends AbstractRepository<Typ
     TypeConsultationRadiotherapie findByCode(String code);
     int deleteByCode(String code);
 
-    List<TypeConsultationRadiotherapie> findByServicesCode(String code);
-    int deleteByServicesCode(String code);
+    List<TypeConsultationRadiotherapie> findByServicesId(Long id);
+    int deleteByServicesId(Long id);
 
     @Query(value = "SELECT MAX(item.ordre) FROM TypeConsultationRadiotherapie item where item.etablissementId = :etablissementId")
     Long findMaxOrdreByEtablissementIdOrder(@Param("etablissementId") Long etablissementId);

@@ -12,8 +12,8 @@ public interface HistortiquePrescriptionRadiotherapieAdminService extends IServi
 
     List<HistortiquePrescriptionRadiotherapie> findByPrescriptionRadiotherapieId(Long id);
     int deleteByPrescriptionRadiotherapieId(Long id);
-    List<HistortiquePrescriptionRadiotherapie> findByStatutRadiotherapieId(Long id);
-    int deleteByStatutRadiotherapieId(Long id);
+    List<HistortiquePrescriptionRadiotherapie> findByStatutRadiotherapieCode(String code);
+    int deleteByStatutRadiotherapieCode(String code);
 
 
 

@@ -10,8 +10,8 @@ import ma.enova.radio.dao.criteria.history.ImmobilistionHistoryCriteria;
 
 public interface ImmobilistionAdminService extends IService<Immobilistion, ImmobilistionDto,ImmobilistionCriteria, ImmobilistionHistoryCriteria> {
 
-    List<Immobilistion> findByServicesCode(String code);
-    int deleteByServicesCode(String code);
+    List<Immobilistion> findByServicesId(Long id);
+    int deleteByServicesId(Long id);
     Long getNextOrdre();
 
 

@@ -10,8 +10,8 @@ import ma.enova.radio.dao.criteria.history.ProtocoleInclusionHistoryCriteria;
 
 public interface ProtocoleInclusionAdminService extends IService<ProtocoleInclusion, ProtocoleInclusionDto,ProtocoleInclusionCriteria, ProtocoleInclusionHistoryCriteria> {
 
-    List<ProtocoleInclusion> findByServicesCode(String code);
-    int deleteByServicesCode(String code);
+    List<ProtocoleInclusion> findByServicesId(Long id);
+    int deleteByServicesId(Long id);
     Long getNextOrdre();
 
 

@@ -16,8 +16,8 @@ public interface CategoriePersonnelDao extends AbstractRepository<CategoriePerso
     CategoriePersonnel findByCode(String code);
     int deleteByCode(String code);
 
-    List<CategoriePersonnel> findByServicesCode(String code);
-    int deleteByServicesCode(String code);
+    List<CategoriePersonnel> findByServicesId(Long id);
+    int deleteByServicesId(Long id);
 
     @Query(value = "SELECT MAX(item.ordre) FROM CategoriePersonnel item where item.etablissementId = :etablissementId")
     Long findMaxOrdreByEtablissementIdOrder(@Param("etablissementId") Long etablissementId);

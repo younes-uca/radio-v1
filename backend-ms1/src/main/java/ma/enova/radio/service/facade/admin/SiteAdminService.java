@@ -10,8 +10,8 @@ import ma.enova.radio.dao.criteria.history.SiteHistoryCriteria;
 
 public interface SiteAdminService extends IService<Site, SiteDto,SiteCriteria, SiteHistoryCriteria> {
 
-    List<Site> findByServicesCode(String code);
-    int deleteByServicesCode(String code);
+    List<Site> findByServicesId(Long id);
+    int deleteByServicesId(Long id);
     Long getNextOrdre();
 
 
